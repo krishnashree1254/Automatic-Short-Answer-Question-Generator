@@ -61,8 +61,8 @@ ASQAG/
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/isonukumarp368/ASQAG.git
-cd ASQAG
+git clone https://github.com/krishnashree1254/Automatic-Short-Answer-Question-Generator.git
+cd Automatic-Short-Answer-Question-Generator
 ```
 
 ### 2️⃣ Create Virtual Environment
