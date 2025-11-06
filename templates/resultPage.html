@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ASQAG</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename = 'assets/exam.ico')}}" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static', filename = 'css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <nav style="background-color: black; height: 65px;" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">
+                    <img src="static/assets/bg.png" style="width: 200px" alt="LOGO">
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul style="color: black;" class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/#home_ind">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#main_sec">About</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>        
+
+        <!-- <section> -->
+                
+                
+                
+
+        <!-- </section> -->
+        <section id="main_sec" style="padding:4rem 0rem; margin-top: 0px; justify-content: center; align-items: center; height: 100vh;" class="page-section">
+            <div style="background-image:url('{{url_for('static', filename = 'assets/img/main_bg.jpg')}}'); background-size: cover; background-repeat: no-repeat;  min-height: 100vh;">
+                
+            
+                <div style="margin-left: 60px; padding-top: 60px;">
+                        
+                        
+                        <form method="POST" action="/process_answers">
+                            {% set questionNo=namespace(value=0) %}
+                            {% for question in questions %}
+                                <div style="margin-bottom: 30px;">
+                                    <div style="font-weight: bolder;font-size: 25px;">
+                                        {% set questionNo.value = questionNo.value + 1 %}
+                                            {{questionNo.value}}.{{question}}
+                                    </div>
+                                    <label>Ans:</label>
+                                    <input type="text" style="border: none;
+    border-bottom: 1px solid black; /* Set the color and thickness of the underline */
+    outline: none;
+    font-size: 16px; /* Set the font size */
+    background: transparent; padding: 5px 0;" size="40" name="answer{{questionNo.value-1}}">
+                                    
+                                </div>
+                                
+
+                            {% endfor %}
+                            
+
+                            <label style="margin-right: 10px;" for="checkbox">Send email?</label>
+                            <input style="border: solid 0px black; height:18px; border-radius:5px" type="checkbox" id="checkbox" name="checkbox"><br>
+                            <label style="margin-right: 10px;">Enter email: </label>
+                            <input style="border: solid 0px black; height:18px; border-radius:5px" type="email" name="email"><br>
+                            <br>
+
+                            <button style="margin-bottom: 30px;" type="submit" class="btn btn-primary btn-xl">Submit</button>
+
+                            <!-- <button style="margin: 30px 0px;" class="btn btn-primary btn-xl" type="submit">Mail the questions</button> -->
+                        </form>
+                        
+
+                        
+                </div>   
+            </div>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{url_for('static', filename = 'js/scripts.js')}}"></script>
+        
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

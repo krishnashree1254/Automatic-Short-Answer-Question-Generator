@@ -1,0 +1,198 @@
+{% extends "layout.html" %} 
+{% block body %}
+        
+        <header id="home_ind" class="masthead" style="background-image: url('{{url_for('static', filename = 'assets/img/homebgmain_cpy.jpg')}}'">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1   class="text-white font-weight-bold">ACCORDING TO BLOOM'S TAXONOMY, AUTOMATIC SHORT ANSWER QUESTION GENERATION FROM TEXT AND IMAGE</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">ASQAG is an ML model built to enhance the assessment preparations of it's users and in the long run it's going to be one of the most wanted study tools</p>
+                        <a class="btn btn-primary btn-xl" href="#about">Find Out More &darr;</a>
+                    </div>
+            </div>
+        </header>
+
+        <!-- About-->
+        <section style="background-color: black;" class="page-section" id="about" >
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Gratitude</h2>
+                        <hr class="divider divider-light" />                        
+                        <div><p class="text-white-75 mb-4">Under the invaluable guidance of My faculty Members, me and my team expresses profound gratitude. His expertise has shaped our project on 'Automatic Short Questions and Answers Generation from Text and its Evaluation'.</p>
+                        </div>
+                        <div style="color: white;" class="typewriter-text"></div>
+
+                        <a style="margin-top: 25px;" class="btn btn-light btn-xl" href="/mainPage">Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Procedure -->
+        <section class="page-section" id="procedure">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Steps to follow</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <!-- <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div> -->
+                            <div class="mb-2"><i style="font-size: 30px;" class="text-primary">1</i></div>
+                            <h3 class="h4 mb-2">Input the text</h3>
+                            <p class="text-muted mb-0">Enter or paste the text from which you want to extract the questions!</p>
+                        </div>
+                    </div><div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <!-- <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div> -->
+                            <div class="mb-2"><i style="font-size: 30px;" class="text-primary">2</i></div>
+
+                            <h3 class="h4 mb-2">Bloom's level</h3>
+                            <p class="text-muted mb-0">Select the level of Bloom's taxonomy of which you want to generate the questions</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <!-- <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div> -->
+                            <div class="mb-2"><i style="font-size: 30px;" class="text-primary">3</i></div>
+
+                            <h3 class="h4 mb-2">Number of questions</h3>
+                            <p class="text-muted mb-0">Select the number of questions you want to generate from the text</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <!-- <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div> -->
+                            <div class="mb-2"><i style="font-size: 30px;" class="text-primary">4</i></div>
+                            <h3 class="h4 mb-2">Submit</h3>
+                            <p class="text-muted mb-0">Click on the 'Generate questions' button to process the text and get the questions</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <!-- <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div> -->
+                            <div class="mb-2"><i style="font-size: 30px;" class="text-primary"></i></div>
+                            <h3 class="h4 mb-2">  </h3>
+                            <p class="text-muted mb-0">     </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <!-- <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div> -->
+                            <div class="mb-2"><i style="font-size: 30px;" class="text-primary">5</i></div>
+                            <h3 class="h4 mb-2">Answer</h3>
+                            <p class="text-muted mb-0">Now, answer the questions generated as per your knowledge</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <!-- <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div> -->
+                            <div class="mb-2"><i style="font-size: 30px;" class="text-primary">6</i></div>
+                            <h3 class="h4 mb-2">Score</h3>
+                            <p class="text-muted mb-0">Get your score displayed for each questions and complete assessment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="main_sec" style="display: flex; justify-content: center; align-items: center; height: 100vh;" class="page-section">
+            <div style="background-image: url('{{url_for('static', filename = 'assets/img/homebg.jpg')}}'); height:100vh" class="container px-4 px-lg-5">
+                <div style="margin-left:250px;font-size: 20px; padding: 40px;" class="col-lg-8 text-center"><h1 class="text-black-75 mb-4">Bloom's taxonomy</h1>
+                <p class="text-black-75 mb-4">Bloom's Taxonomy is a hierarchical framework used in education to classify educational learning objectives into levels of complexity and specificity. Developed by educational psychologist Benjamin Bloom in the 1950s, it has become a fundamental tool for teachers and educators.</p><br><p> The taxonomy is divided into three main domains: cognitive, affective, and psychomotor. The cognitive domain focuses on intellectual skills and knowledge acquisition, ranging from basic recall to complex problem-solving. The affective domain deals with emotions, attitudes, and values, emphasizing the development of personal and social skills. The psychomotor domain relates to physical skills and coordination, encompassing tasks that require physical manipulation and control. Bloom's Taxonomy encourages a progressive approach to learning, moving from lower-order thinking skills (remembering, understanding) to higher-order skills (applying, analyzing, evaluating, creating). Educators use it to design effective learning experiences, assess students' understanding, and promote critical thinking and creativity. The taxonomy's versatility makes it applicable across various educational levels and subjects, providing a structured framework for curriculum development and assessment strategies.</p></div>
+            </div>
+        </section>
+
+        <section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Suggestions are welcomed!</h2>
+                        <hr class="divider" />
+                        <p class="text-muted mb-5">Your suggestions correct not just our ideas but our careers!</p>
+                    </div>
+                </div>
+        
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" action="/" method="POST" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="email" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" name="suggestion" id="message" type="text" placeholder="Enter your suggestion here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Suggestion</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A suggestion is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <script>
+
+            // JavaScript for the typewriter effect
+            const texts = [
+                
+                "Using till learnt text pre-processing and other machine learning techniques, our system autonomously generates precise questions and answers, with a focus on constant evolution for enhanced accuracy. This innovation holds the promise to simplify education, customer support, and content creation. Fueled by passion and guided by knowledge, we're dedicated to making a significant mark in the field of artificial intelligence, thanks to my faculty and unwavering support and mentorship."
+                // Add more lines of text if needed
+            ];
+
+            let index = 0;
+            let charIndex = 0;
+            let textElement = document.querySelector('.typewriter-text');
+
+            function type() {
+                if (index < texts.length) {
+                    if (charIndex < texts[index].length) {
+                        textElement.textContent += texts[index].charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, 25); // Typing speed (adjust as needed)
+                    } else {
+                        index++;
+                        charIndex = 0;
+                        setTimeout(type, 1000); // Delay before typing next line (adjust as needed)
+                    }
+                }
+            }
+
+            // Start the typing effect
+            setTimeout(type, 1000); // Initial delay before starting the typing effect (adjust as needed)
+
+        </script>
+        {% endblock %}
+        

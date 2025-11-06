@@ -1,0 +1,36 @@
+{% extends "layout.html" %} 
+{% block body %}
+
+<section id="greet" class="page-section" style="padding-top:65px;padding-bottom: 0px;">
+	<div style="background-image:url('{{url_for('static', filename = 'assets/img/finalBg.jpg')}}'); background-size: cover; background-repeat: no-repeat;  min-height: 100vh;">
+		<div style="margin-left:40px ;padding: 30px;">
+			<h1 style="text-align: center;">Your score percentage is {{s}}%</h1><br>
+			{% set count_ = namespace(value=count * 5) %}
+			<h2 style="text-align: center;">Score is {{ sc }}/{{ count_.value }}</h2>
+
+			<h2>Generated answers are:</h1>
+			<ol>
+		        {% for answer, _ in gen_answers %}
+		            <li>{{ answer }}</li><br>
+		        {% endfor %}
+
+		    </ol>
+		    <hr>
+		    <h2>Your answers are:</h1>
+			<ol>
+				{% set i=namespace(value=0) %}
+		        {% for answers in user_answers %}
+		            <li>{{ answers }}  ( {{score[i.value]}}/5)</li>
+		            {% set i.value = i.value + 1 %}
+		        {% endfor %}
+		        
+		    </ol>
+
+		    
+		</div>
+
+	</div>
+</section>
+
+
+{% endblock %}
